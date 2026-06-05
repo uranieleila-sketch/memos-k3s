@@ -1,22 +1,4 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: memos-ingress
-  namespace: memos
-  labels:
-    name: memos
-  annotations:
-    spec.ingressClassName: traefik
-spec:
-  ingressClassName: tailscale
-  tls:
-    - hosts:
-        - memos
-  rules:
-    - http:
-        paths:
-          - pathType: Prefix
-            path: /
+FF
             backend:
               service:
                 name: svc-app
